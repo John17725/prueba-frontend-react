@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import {Navbar} from './components/Navbar';
+import {Result} from './components/Result';
 
-function App() {
+function App(props) {
+  const [data, setData] = useState([]);
+  const urlAPI = 'https://nowaii-devtest.s3.us-west-2.amazonaws.com/detallado_categorias.json';
+  const fetchContent = (urlAPI) => {
+    fetch(urlAPI)
+      .then((response) => response.json())
+      .then(data => setData(data.data))
+      .catch((error) =>console.log(error))
+  };
+  useEffect(() => {
+    fetchContent(urlAPI);
+  }, [])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // <React.Fragment>
+    //   <Navbar brand="TestApi"/>
+    //   <div className="container">
+    //     <Result data={data}/>
+    //   </div>
+    // </React.Fragment>
+  <React.Fragment>
+    <div className="container">
+        <div className="row">
+          <div className="col-3 bg-primary">
+            uno
+          </div>
+          <div className="col">
+            <div className="row">
+                <div className="col">1</div>
+                <div className="col">2</div>
+                <div className="col">3</div>
+            </div>
+            <div className="row">
+                <div className="col">1</div>
+                <div className="col">2</div>
+                <div className="col">3</div>
+            </div>
+            <div className="row">
+                <div className="col">1</div>
+                <div className="col">2</div>
+                <div className="col">3</div>
+            </div>
+          </div>
+        </div>
     </div>
+  </React.Fragment>
   );
 }
 
