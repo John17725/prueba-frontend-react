@@ -1,17 +1,26 @@
 import React from 'react'
 import './Card.css';
 
-function Card ({props}) {
+function Card (props) {
+    const urlSlug = 'https://www.google.com.mx/search?q='+props.item.slug;
+    // console.log(urlSlug)
   return (
     <div>
         <div className="card">
             <div className="imgContainer">
-                <img src="https://http2.mlstatic.com/D_NQ_NP_956694-MLM50173824439_062022-O.webp" className="card-img-top" alt="camion"/>
+                <img src={props.item.image} className="card-img-top" alt="camion"/>
             </div>
             <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <div className="card-details">
+                    <h5 className="card-title">{props.item.name}</h5>
+                    <p>{props.item.marketplace}</p>
+                    <p>{props.item.item_price} MXN</p>
+                    <p className="card-text">{props.item.usd_price} USD</p>
+                </div>
+                <div className="card-like">
+                    <p>{props.item.likes} Likes</p>
+                <a href={urlSlug} className="btn btn-primary">Ver mas</a>
+                </div>
             </div>
         </div>
     </div>

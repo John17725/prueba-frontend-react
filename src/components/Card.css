@@ -12,3 +12,28 @@
     margin-right: auto;
     object-fit: cover;
 }
+
+.card-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button{
+  border: none;
+  background: transparent;
+  /* color: red; */
+}
+.card-like {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* object-fit: cover; */
+}
+
+.card-like p {
+  margin-top:-10px;
+  font-size: 12px;
+  font-weight: 300;
+}

@@ -22,17 +22,16 @@ body{
 }
 
 .container-filters{
-  width: 15%;
+  width: 20%;
   height: 800px;
-  position: fixed;
-  z-index: 1;
+  position: sticky;
   border-radius: 18px;
   background: var(--backgroundFilter);
 }
 
 .container-grid{
-  margin-left: 22%;
-  display: flex;
-  align-items: center;
   width: 80%;
+  /* margin-left: 20%; */
+  /* display: flex; */
+  /* align-items: center; */
 }
