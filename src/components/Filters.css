@@ -1,0 +1,16 @@
+.title-filter{
+    margin: 12px 0 12px 0;
+    text-align: left;
+}
+
+.accordion{
+    margin: 18px 0 14px 0;
+}
+.accordion-button:not(.collapsed){
+    background: var(--backgroundColorAccordion);
+    color:white;
+}
+.accordion-collapse{
+    background: var(--backgroundColor);
+    /* color: red; */
+}

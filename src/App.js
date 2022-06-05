@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {Navbar} from './components/Navbar';
 import {Result} from './components/Result';
+import {Filters} from './components/Filters';
+import {Card} from './components/Card';
+import './App.css'
 
 function App(props) {
   const [data, setData] = useState([]);
@@ -22,32 +25,52 @@ function App(props) {
     //     <Result data={data}/>
     //   </div>
     // </React.Fragment>
-  <React.Fragment>
-    <div className="container">
-        <div className="row">
-          <div className="col-3 bg-primary">
-            uno
+    <React.Fragment>
+      <Navbar brand="TestApi"/>
+      <div className="container main-layout">
+          <div className="row">
+            <div className="col-3 container-filters">
+              <Filters title="Filters"/>
+            </div>
+            <div className='container-fluid container-grid'>
+              <div className='row'>
+                  <div className='col-xs-12 col-md-4 col-sm-2'>
+                    <Card/>
+                  </div>
+                  <div className='col-xs-12 col-md-4 col-sm-2'>
+                    <Card/>
+                  </div>
+                  <div className='col-xs-12 col-md-4 col-sm-2'>
+                    <Card/>
+                  </div>
+                  <div className='col-xs-12 col-md-4 col-sm-2'>
+                    <Card/>
+                  </div>
+                  <div className='col-xs-12 col-md-4 col-sm-2'>
+                    <Card/>
+                  </div>
+                  <div className='col-xs-12 col-md-4 col-sm-2'>
+                    <Card/>
+                  </div>
+                  <div className='col-xs-12 col-md-4 col-sm-2'>
+                    <Card/>
+                  </div>
+                  <div className='col-xs-12 col-md-4 col-sm-2'>
+                    <Card/>
+                  </div>
+                  <div className='col-xs-12 col-md-4 col-sm-2'>
+                    <Card/>
+                  </div>
+              </div>
+            </div>
           </div>
-          <div className="col">
-            <div className="row">
-                <div className="col">1</div>
-                <div className="col">2</div>
-                <div className="col">3</div>
-            </div>
-            <div className="row">
-                <div className="col">1</div>
-                <div className="col">2</div>
-                <div className="col">3</div>
-            </div>
-            <div className="row">
-                <div className="col">1</div>
-                <div className="col">2</div>
-                <div className="col">3</div>
-            </div>
-          </div>
-        </div>
-    </div>
-  </React.Fragment>
+          
+      </div>
+    </React.Fragment>
+  // <React.Fragment>
+  //   <Navbar brand="TestApi"/>
+
+  // </React.Fragment>
   );
 }
 

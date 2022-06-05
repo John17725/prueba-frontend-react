@@ -7,7 +7,7 @@ function Result({data = []}) {
             data.map((item, index) =>(
                 <div key={index} className="col">
                     <div className="card">
-                        
+                        img
                     </div>
                 </div>
             ))

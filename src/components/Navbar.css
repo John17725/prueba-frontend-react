@@ -1,0 +1,8 @@
+.navbar{
+    background:var(--mainColor);
+}
+
+.navbar-brand{
+    text-decoration:none;
+    color:var(--fontColor);
+}

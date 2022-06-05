@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './Navbar.css';
 function Navbar({brand}){
   return (
-      <nav className="navbar navbar-dark bg-dark">
+      <nav className="navbar">
           <div className="container">
             <a className="navbar-brand" href="/">{brand}</a>
           </div>
