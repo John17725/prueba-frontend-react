@@ -3,8 +3,7 @@ import './Filters.css';
 import {Loading} from './Loading'
 function Filters(props) {
     const [optionCategory, setOptionCategory] = useState([]);
-    const [optionCategories, setCategories] = useState([]);
-    const [loading, setLoading] = useState([]);
+   
     if(props.filters.length == 0){
         console.log('iu',props.filters.length,props);
     }else{
@@ -16,7 +15,6 @@ function Filters(props) {
                     <div className="mb-3">
                         <label className="form-label">Color</label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div className="mb-3 ">
                         <label className="form-label">Precio minimo:</label>
@@ -36,7 +34,7 @@ function Filters(props) {
                         </select>
                     </div>
                     <input type="text" className="form-control hidden" id="exampleInputEmail1" placeholder='hidden' aria-describedby="emailHelp"/>
-                    <button type="submit" className="btn btn-primary">Buscar</button>
+                    <button type="submit" className="btn btn-primary mt-4">Buscar</button>
                 </form>
             </div>
         )

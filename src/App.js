@@ -16,8 +16,6 @@ function App(props) {
   fetch(urlAPI)
       .then((response) => response.json())
       .then(data => {
-          // alert(data.error)
-          
           setLoading(true);
           setFilter(data)
           console.log('filter',data.data);
