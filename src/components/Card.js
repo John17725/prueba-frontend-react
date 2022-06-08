@@ -3,8 +3,7 @@ import './Card.css';
 
 function Card (props) {
     const urlSlug = 'https://www.google.com.mx/search?q='+props.item.slug;
-    // console.log(urlSlug)
-  return (
+    return (
     <div>
         <div className="card">
             <div className="imgContainer">
@@ -24,7 +23,7 @@ function Card (props) {
             </div>
         </div>
     </div>
-  )
+    )
 }
 
 export {Card};

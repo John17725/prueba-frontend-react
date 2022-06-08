@@ -2,7 +2,11 @@
     margin: 12px 0 12px 0;
     text-align: center;
 }
-
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 .accordion{
     margin: 18px 0 14px 0;
 }
@@ -12,5 +16,7 @@
 }
 .accordion-collapse{
     background: var(--backgroundColor);
-    /* color: red; */
+}
+.form-control-hidden{
+    display: none;
 }
