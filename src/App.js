@@ -59,7 +59,6 @@ function App(props) {
     <React.Fragment>
       <Navbar brand="TestApi"/>
       <div className="container main-layout">
-          <h1 className="">hola{props.Color}</h1>
           <div className="row">
             <div className="col-3 container-filters">
             <div>
